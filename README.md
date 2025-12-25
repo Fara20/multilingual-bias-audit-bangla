@@ -78,22 +78,19 @@ This work addresses gaps in:
 3.	**Adaptive Systems:** Building evidence for context-aware content moderation\
 **Relevant to:** Online safety, platform governance, multilingual NLP, digital rights
 
-**9.Citation**
-If you use this dataset or methodology, please cite:
-Your Name (2024). Multilingual Bias Audit: Bangla vs. English Toxicity Detection.\
-GitHub repository: https://github.com/your-username/multilingual-bias-audit-bangla
 
-**10. About**
+
+**9. About**
 **Author:** Farahnaz Reza
 **Affiliation:** Aspiring PhD Researcher in HCI & Adaptive AI\
 **Research Interests:** Bias-aware systems, digital equity, adaptive AI for marginalized users\
 **Contact:** farahnazreza@gmail.com | https://www.linkedin.com/in/farahnaz-reza/|
 
-**11.Acknowledgments**
+**10.Acknowledgments**
 •	Bangla language examples validated by native speakers
 •	Inspired by multilingual bias research in AI fairness community
 
-**12.Status Updates**<br>
+**11.Status Updates**<br>
 •	✅ Dataset design completed (10 starter pairs)<br>
 •	Expanding to 30 pairs<br>
 •	Model evaluation in progress<br>
