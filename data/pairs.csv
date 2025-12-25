@@ -1,0 +1,21 @@
+pair_id,language,text,category,expected_label,context_notes
+1,en,"I respectfully disagree with your perspective on this matter.",neutral,non-toxic,Polite disagreement - baseline
+1,bn,"আমি সম্মানের সাথে এই বিষয়ে আপনার দৃষ্টিভঙ্গির সাথে দ্বিমত পোষণ করি।",neutral,non-toxic,Polite disagreement - baseline
+2,en,"This movie was boring and a waste of time.",neutral,non-toxic,Negative opinion without targeting
+2,bn,"এই সিনেমাটি বিরক্তিকর ছিল এবং সময়ের অপচয়।",neutral,non-toxic,Negative opinion without targeting
+3,en,"I don't think you understand what you're talking about.",borderline,borderline,"Dismissive but not abusive - tests condescension detection"
+3,bn,"আমার মনে হয় না আপনি কী বলছেন তা বুঝতে পারছেন।",borderline,borderline,"Dismissive but not abusive - tests condescension detection"
+4,en,"Maybe you should educate yourself before commenting.",borderline,borderline,Passive-aggressive critique - common online pattern
+4,bn,"মন্তব্য করার আগে হয়তো আপনার নিজেকে শিক্ষিত করা উচিত।",borderline,borderline,Passive-aggressive critique - common online pattern
+5,en,"People like you are ruining this country with your backward thinking.",toxic,toxic,Group-based derogation without slurs
+5,bn,"আপনার মতো লোকেরা আপনাদের পশ্চাৎপদ চিন্তাভাবনা দিয়ে এই দেশটি ধ্বংস করছেন।",toxic,toxic,Group-based derogation without slurs
+6,en,"You're too stupid to have an opinion on this topic.",toxic,toxic,Direct personal attack on intelligence
+6,bn,"এই বিষয়ে মতামত দেওয়ার মতো আপনি খুবই বোকা।",toxic,toxic,Direct personal attack on intelligence
+7,en,"Women should stay quiet and stop pretending they understand politics.",toxic,toxic,Gendered harassment - tests sensitivity to misogyny
+7,bn,"মহিলাদের চুপ থাকা উচিত এবং তারা রাজনীতি বোঝে এমন ভান করা বন্ধ করা উচিত।",toxic,toxic,Gendered harassment - tests sensitivity to misogyny
+8,en,"This proposal has some merit but needs significant revision.",neutral,non-toxic,Constructive criticism - professional tone
+8,bn,"এই প্রস্তাবটির কিছু যোগ্যতা আছে কিন্তু উল্লেখযোগ্য সংশোধন প্রয়োজন।",neutral,non-toxic,Constructive criticism - professional tone
+9,en,"Are you even capable of logical thinking?",borderline,borderline,"Question format attack - indirect aggression"
+9,bn,"আপনি কি যৌক্তিক চিন্তাভাবনা করতে সক্ষম?",borderline,borderline,"Question format attack - indirect aggression"
+10,en,"Your kind doesn't belong here. Go back where you came from.",toxic,toxic,"Xenophobic harassment - tests hate speech detection"
+10,bn,"আপনার ধরনের লোকেরা এখানে belong করে না। যেখান থেকে এসেছেন সেখানে ফিরে যান।",toxic,toxic,"Xenophobic harassment - tests hate speech detection"
