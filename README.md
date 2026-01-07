@@ -62,15 +62,85 @@ multilingual-bias-audit-bangla<br>
 │   ├── predictions.csv<br>     # Model outputs
 │   └── key_examples.md<br>    # Documented failure cases
 └── docs<br>
-    └── project_report.pdf     # Full write-up
-
+    └── project_report.pdf     # Full write-up\
+<br>
 7. **Key Findings**
-[To be completed after analysis]<br>
-•	**Initial observations:**<br>
--> Model performance comparison EN vs BN<br>
--> Specific bias patterns identified<br>
--> Examples of harmful errors<br>
+Key Findings (Phase 1: 10 Pairs)\
+<b>Counter-Intuitive Discovery:</b> “Multilingual” Models Show GREATER Bias<br><br>
 
+<b>Model</b> | <b>English Accuracy</b> | <b>Bangla Accuracy</b> | <b>Bias Gap</b><br>
+Toxic-BERT (English-focused) | 40% | 40% | 0%<br>
+Detoxify (Multilingual) | 50% | 30% | <b>20%</b><br>
+
+<b>The “multilingual” model performed 20% worse on Bangla despite claiming language support.</b><br>
+<b>Critical Pattern:</b> Complete Detection Failure<br>
+
+• <b>All Bangla texts scored 0.00</b> (indicating total failure, not low confidence)<br>
+• <b>2 out of 4 toxic Bangla texts</b> completely missed by Detoxify<br>
+• Same insults detected with <b>90–100% confidence in English</b>, <b>0% in Bangla</b><br>
+
+<b>Example:</b>\
+EN: “You’re too stupid to have an opinion” → <b>Detoxify: TOXIC (1.00)</b><br>
+BN: “আপনি খুবই বোকা” (identical meaning) → <b>Detoxify: NON-TOXIC (0.00)</b><br>
+
+<b>Implication:</b><br>
+Bangla users face <b>identical harassment</b> but receive <b>less protection</b>.<br>
+
+
+
+<b> Methodology</b><br>
+<b>Paired Prompts Design</b><br>
+<b>30 semantically equivalent text pairs (English/Bangla)</b><br>
+  – 10 complete<br>
+  – 20 in progress<br>
+
+<b>Prompt Categories</b><br>
+-<b>Neutral (10 pairs):</b> Baseline to test false positives<br>
+-<b>Borderline (10 pairs):</b> Ambiguous cases<br>
+-<b>Toxic (10 pairs):</b> Clear harassment and hate speech<br><br>
+
+-Each Bangla text is <b>naturally phrased</b>, not word-for-word translated<br>
+-<b>Intent controlled</b> to isolate language as the variable<br><br>
+
+<b>Models Tested</b><br>
+
+-<b>Toxic-BERT</b> (unitary/toxic-bert)<br>
+  – English-focused toxicity detector (~500MB)<br>
+<b>Detoxify (Multilingual)</b><br>
+  – Claims support for 7+ languages including Bangla (~900MB)<br>
+-<b>Future:</b> Testing 2–3 additional multilingual models (Phase 3)<br>
+
+<b>Evaluation Metrics</b><br>
+
+-<b>Accuracy by Language</b><br>
+-<b>Label Agreement Rate</b><br>
+-<b>Confidence Score Analysis</b> (0.00 patterns)<br>
+-<b>Harmful Error Patterns</b><br>
+  – False negatives in Bangla<br>
+  – False positives in Bangla<br>
+-<b>Qualitative Analysis</b><br>
+
+
+<b>Current Results Summary</b><br>
+<b>Phase 1 Analysis</b> (10 pairs / 20 texts)<br>
+
+<b>Completed:</b><br>
+-Dataset collected and validated<br>
+-Both models evaluated<br>
+-Bias patterns documented<br>
+-Results saved to <b>results/predictions.csv</b><br><br>
+
+<b>Key Statistics:</b><br>
+
+-<b>False negatives (Bangla):</b> 2/4 toxic cases missed by Detoxify<br>
+-<b>Label agreement:</b><br>
+  – Detoxify: 80%<br>
+  – Toxic-BERT: 100% (misleading due to over-flagging)<br>
+-<b>Confidence scores:</b><br>
+  – 100% of Bangla texts scored <b>0.00</b><br>
+
+<b>Major Finding:</b><br>
+<b>Multilingual models can be MORE biased than monolingual ones</b>, challenging assumptions about “multilingual AI.”<br>
 **8.Research Context**
 This work addresses gaps in:
 1.	**Human-Computer Interaction:** Ensuring digital platforms serve diverse linguistic communities equitably\
