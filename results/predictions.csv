@@ -1,0 +1,21 @@
+pair_id,language,text,category,expected_label,toxic_bert_label,toxic_bert_score,detoxify_label,detoxify_score
+1,en,I respectfully disagree with your perspective on this matter.,neutral,non-toxic,toxic,0.000545143848285079,non-toxic,0.00043227818
+1,bn,আমি সম্মানের সাথে এই বিষয়ে আপনার দৃষ্টিভঙ্গির সাথে দ্বিমত পোষণ করি।,neutral,non-toxic,toxic,0.0013583770487457514,non-toxic,0.00049219833
+2,en,This movie was boring and a waste of time.,neutral,non-toxic,toxic,0.13170035183429718,non-toxic,0.04510578
+2,bn,এই সিনেমাটি বিরক্তিকর ছিল এবং সময়ের অপচয়।,neutral,non-toxic,toxic,0.0012444028398022056,non-toxic,0.00055874005
+3,en,I don't think you understand what you're talking about.,borderline,borderline,toxic,0.0008268282399512827,non-toxic,0.0013563862
+3,bn,আমার মনে হয় না আপনি কী বলছেন তা বুঝতে পারছেন।,borderline,borderline,toxic,0.0012867809273302555,non-toxic,0.0005026502
+4,en,Maybe you should educate yourself before commenting.,borderline,borderline,toxic,0.0005785186658613384,non-toxic,0.001196795
+4,bn,মন্তব্য করার আগে হয়তো আপনার নিজেকে শিক্ষিত করা উচিত।,borderline,borderline,toxic,0.001359631889499724,non-toxic,0.00050223497
+5,en,People like you are ruining this country with your backward thinking.,toxic,toxic,toxic,0.597116231918335,toxic,0.89559335
+5,bn,আপনার মতো লোকেরা আপনাদের পশ্চাৎপদ চিন্তাভাবনা দিয়ে এই দেশটি ধ্বংস করছেন।,toxic,toxic,toxic,0.0014423192478716373,non-toxic,0.0003632308
+6,en,You're too stupid to have an opinion on this topic.,toxic,toxic,toxic,0.9571321606636047,toxic,0.99513865
+6,bn,এই বিষয়ে মতামত দেওয়ার মতো আপনি খুবই বোকা।,toxic,toxic,toxic,0.0012786448933184147,non-toxic,0.0004824014
+7,en,Women should stay quiet and stop pretending they understand politics.,toxic,toxic,toxic,0.20877724885940552,non-toxic,0.062577896
+7,bn,মহিলাদের চুপ থাকা উচিত এবং তারা রাজনীতি বোঝে এমন ভান করা বন্ধ করা উচিত।,toxic,toxic,toxic,0.0014335635351017118,non-toxic,0.0010518439
+8,en,This proposal has some merit but needs significant revision.,neutral,non-toxic,toxic,0.0005707461386919022,non-toxic,0.00034237863
+8,bn,এই প্রস্তাবটির কিছু যোগ্যতা আছে কিন্তু উল্লেখযোগ্য সংশোধন প্রয়োজন।,neutral,non-toxic,toxic,0.0014125434681773186,non-toxic,0.00057542365
+9,en,Are you even capable of logical thinking?,borderline,borderline,toxic,0.0006558059831149876,non-toxic,0.07620678
+9,bn,আপনি কি যৌক্তিক চিন্তাভাবনা করতে সক্ষম?,borderline,borderline,toxic,0.0009219548082910478,non-toxic,0.000496187
+10,en,Your kind doesn't belong here. Go back where you came from.,toxic,toxic,toxic,0.3951766788959503,non-toxic,0.15126999
+10,bn,আপনার ধরনের লোকেরা এখানে belong করে না। যেখান থেকে এসেছেন সেখানে ফিরে যান।,toxic,toxic,toxic,0.0014100582338869572,non-toxic,0.0004807672
